@@ -1,4 +1,8 @@
-const WORDS = ["teszt", "a techtábor nagyon jó"];
+const WORDS = [
+    "teszt",
+    "algoritmus",
+    "a technológia érdekes"
+];
 var wordIndex = 0;
 var word = WORDS[wordIndex];
 var currentCharacterIndex = 0;
@@ -48,7 +52,7 @@ function redraw() {
     // Fill the first row
     for (var i = 0; i < word.length; i++) {
         var cellContent = i < currentCharacterIndex ? word[i] : "?";
-        firstRow.append(`<td>${cellContent.toUpperCase()}</td>`);
+        firstRow.append(`<td>${renderChar(cellContent)}</td>`);
     }
     // Number of new rows to make
     var maxGuessesMade = 0;
@@ -74,7 +78,7 @@ function redraw() {
                 continue;
             }
             var guess = columnGuesses[rowIndex];
-            cell.text(guess.toUpperCase());
+            cell.text(renderChar(guess));
         }
     }
 }
@@ -85,6 +89,13 @@ function drawHeader() {
     for (var i = 0; i < WORDS.length; i++) {
         header.append(`<div onclick="startGame(${i})">${i}</div>`);
     }
+}
+
+function renderChar(char) {
+    if (char === " ") {
+        return "_";
+    }
+    return char.toUpperCase();
 }
 
 $(document).ready(function() {

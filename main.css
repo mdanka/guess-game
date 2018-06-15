@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #header {
@@ -39,12 +40,13 @@ body {
 #mainContent table tr#firstRow {
     background-color: #ffe7b3;
     height: 70px;
+    font-weight: bold;
 }
 
 #mainContent table tr#firstRow td {
-    font-size: 36px;
+    font-size: 48px;
 }
 
 #mainContent table tr td {
-    font-size: 24px;
+    font-size: 36px;
 }
