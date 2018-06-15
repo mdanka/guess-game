@@ -1,6 +1,8 @@
 const WORDS = [
     "teszt",
     "algoritmus",
+    "a számítógépek gyorsak",
+    "ügyesek vagytok",
     "a technológia érdekes"
 ];
 var wordIndex = 0;
